@@ -29,7 +29,7 @@ var tempColor;
     
 //first takeoff the margins    
 var height = 400 - margin.top - margin.bottom,
-    width = 1100 - margin.left - margin.right,
+    width = 800 - margin.left - margin.right,
     barWidth = 50,
     barOffset = 5; 
     
@@ -64,7 +64,7 @@ var colors = d3.scale.linear()
          .style('opacity', 0);  
     
 //Our d3 object into a var then we animate the whole barchart    
- var myChart = d3.select('#chart').append('svg')
+ var myChart = d3.select('#barchart').append('svg')
             .style('background', '#262626')
 //return back the margins 
             .attr('width', width + margin.left + margin.right)
@@ -175,39 +175,43 @@ var vGuide = d3.select('svg').append('g')
  * 
  *           PIE CHART STARTS HERE
  * 
- * ******************************************//*
+ * ******************************************/
 
   var width = 400,
           height = 400,
           radius = 200,
-          colors = /*d3.scale.category20c()*//*
+          colors = /*d3.scale.category20c()*/
           d3.scale.ordinal()
                   .range(['#595AB7','#A57706','#D11C24','#C61C6F','#BD3613','#2176C7']);
   
   var piedata = [
       { 
-          label : "David",
+          label : "Polymerjs",
           value : 50
       },
       {
-          label : "Mark",
+          label : "Node",
+          value : 30
+      },
+      {
+          label : "Requirejs",
           value : 50
       },
       {
-          label : "Naphtally",
+          label : "Knockoutjs",
+          value : 70
+      },
+      {
+          label : "Angularjs",
           value : 50
       },
       {
-          label : "Kelvin",
+          label : "Wallerbyjs",
           value : 50
       },
       {
-          label : "Mary",
-          value : 50
-      },
-      {
-          label : "Daniel",
-          value : 50
+          label : "Reactjs",
+          value : 40
       }
   ]
   
@@ -219,7 +223,8 @@ var vGuide = d3.select('svg').append('g')
   var arc = d3.svg.arc()
           .outerRadius(radius) ;
   
-  var myChart = d3.select('#chart')
+  var myChart = d3.select('#piechart')
+          .style('background', '#262626')
           .append('svg')
           .attr('width', width)
           .attr('height', height)
@@ -248,5 +253,4 @@ var vGuide = d3.select('svg').append('g')
                 d.innerRadius = 0;
                 d.outerRadius = radius;
                 return 'translate(' +arc.centroid(d)+')';
-          })          
-*/
+          });

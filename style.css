@@ -4,3 +4,12 @@
     Author     : Street
 */
 
+#piechart {
+    float: left;
+    width: 30%;
+}
+
+#barchart {
+    float: left;
+    width: 70%;
+}

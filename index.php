@@ -9,8 +9,9 @@
     <body>
         
         <div class="container">
-            <section id="chart"></section>
         </div>
+            <section id="piechart"></section>
+            <section id="barchart"></section>
         
         <script type="text/javascript" src="_/d3.min.js"></script>
         <script type="text/javascript" src="_/scripts.js"></script>
